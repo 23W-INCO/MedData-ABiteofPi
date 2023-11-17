@@ -7,4 +7,5 @@ The project is currently under construction.
 
 ## Data
 The current database in use for the project is a sample of perfectly distributed data. <br>
-In practice real data could be used. This data could contain general information such as age and gender, and/or more precise data such as results from blood test and special medical conditions.
+In practice real data could be used. <br>
+This data could contain general information such as age and gender, and/or more precise data such as results from blood test and special medical conditions.
