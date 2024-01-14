@@ -1,11 +1,23 @@
-# MedData
-This project aims to create a simple way to analyze and compare different health factors and test results on small or large scales. <br>
-This helps to view how different health factors may or may not have effects or relations with other factors or results.
+# MedData: UV Index Guide
+
+UV radiation could cause a variety of different issues ranging from irritation to diiferent types of skin cancer.<br>
+The intensity of UV radiation present in any given location could be measured by the "UV Index".<br>
+Once we understand the general harms of UV radiation, It becomes important to respond accordingly.<br>
+This means limiting the time we spend ouutside and in the sun, and taking other protective measures such as using proper sun protection agents.<br>
+<br>
+Many cancer patients who are or have gone through chemotheray and/or radiation therapy, experience hightened skin sensitivity. This puts them in a more vaunerable position against the sun's radiation. 
+This project aims to guide these patients in a way that is easy to understand and navigate, in taking the proper measures to be safer when it comes to the sun. Although targeted towards these patients, others with sensitive skin could also benefit from the finished project.
 
 ## Data
-The current database in use for the project is a sample of perfectly distributed data. <br>
-In practice, real data could be used. <br>
-This data could contain general information such as age and gender, and/or more precise data, such as results from blood tests and specific medical conditions.
+The project uses a json database, holding cities' names, longitude and latitude information.
+The file's source of data is [GeoNames Gazetteer](http://www.geonames.org/)
+This file is licensed under a [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/) and the version used in the project was accessed from [here](https://github.com/lutangar/cities.json).
+<br>
+The project additionally accesses current time UV Index data from [Open Meteo](https://open-meteo.com/)
+
 
 ## Work in progress
-The project is currently under construction and is being updated constantly.
+The project is currently under construction and is being updated constantly.<br>
+Next in queue of being added: 
+- Colors will change according to the UV index value.
+- There will be guides suggesting actions according to the UV index in the user's selected city.
