@@ -1,7 +1,12 @@
 import { setSelectedCityCallback } from "./loc.js";
 
+const colorScaleC = d3.scaleLinear()
+    .domain([0, 0.01, 2, 5, 7, 10, 20])
+    .range(['#FFEAB6', '#FFD25F', '#FFB800', '#FF9900', '#FF6B00', '#FF3D00']);
 
-
+const colorScaleB = d3.scaleLinear()
+    .domain([0, 0.01, 2, 5, 7, 10, 20])
+    .range(['#FFEAB6', '#FFD873', '#FF7816', '#FF1616', '#FF0000', '#FF0000']);
 
 const svgWidth = 800;
 const svgHeight = 600;
@@ -89,7 +94,7 @@ svg.selectAll("text")
         d3.select("#initial-svg").remove();
         d3.select("#updatedsvg").remove();
 
-        
+
         const svgWidth = 800;
         const svgHeight = 600;
     
@@ -106,21 +111,22 @@ svg.selectAll("text")
             .attr("cx", svgWidth / 2)
             .attr("cy", svgHeight / 2)
             .attr("r", circleRadius)
-            .style("fill", "#FFEAB6")
+            .style("fill", colorScaleB(uvIndex))
             .style("filter", "blur(" + blurRange[0] + "px)");
     
         initsvg.append("circle")
             .attr("cx", svgWidth / 2)
             .attr("cy", svgHeight / 2)
             .attr("r", circleRadius)
-            .style("fill", "#FFEAB6");
+            .style("fill", colorScaleC(uvIndex));
     
         const textLines = [
-            { text: uvIndex, style: "font-size: 60px; font-weight:1000; fill: #314652;" },
-            { text: "UV Index", style: "font-size: 20px; font-weight:1000; fill: #314652;" }
+            { text: uvIndex, style: "font-size: 60px; font-weight:1000; fill: #1B272E" },
+            { text: "UV Index", style: "font-size: 20px; font-weight:1000; fill: #1B272E;" },
+            { text: citydata.name, style: "font-size: 25px; font-weight:800; fill: #1B272E;" }
         ];
     
-        const lineHeight = 50;
+        const lineHeight = 40;
     
         initsvg.selectAll("text")
             .data(textLines)
@@ -134,10 +140,9 @@ svg.selectAll("text")
             .text(d => d.text);
     
         // Function to animate the blur continuously
-           // Function to animate the blur continuously
     function animateBlur() {
         backgroundCircle.transition()
-            .duration(2000) // Adjust the duration as needed
+            .duration(1500) // Adjust the duration as needed
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[0], blurRange[1]);
                 return function (t) {
@@ -146,7 +151,7 @@ svg.selectAll("text")
                 };
             })
             .transition()
-            .duration(2000) // Adjust the duration as needed
+            .duration(1500) // Adjust the duration as needed
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[1], blurRange[0]);
                 return function (t) {
@@ -155,7 +160,7 @@ svg.selectAll("text")
                 };
             })
             .transition()
-            .duration(3000) // Adjust the duration as needed
+            .duration(2500) // Adjust the duration as needed
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[0], blurRange[3]);
                 return function (t) {
@@ -164,7 +169,7 @@ svg.selectAll("text")
                 };
             })
             .transition()
-            .duration(2000) // Adjust the duration as needed
+            .duration(1500) // Adjust the duration as needed
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[3], blurRange[2]);
                 return function (t) {
@@ -173,7 +178,7 @@ svg.selectAll("text")
                 };
             })
             .transition()
-            .duration(2000) // Adjust the duration as needed
+            .duration(1500) // Adjust the duration as needed
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[2], blurRange[3]);
                 return function (t) {
@@ -182,7 +187,7 @@ svg.selectAll("text")
                 };
             })
             .transition()
-            .duration(3000) // Adjust the duration as needed
+            .duration(2500) // Adjust the duration as needed
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[3], blurRange[0]);
                 return function (t) {

@@ -19,6 +19,7 @@ def makehtml(filter=None):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <title>UV Index Guide</title>
 </head>

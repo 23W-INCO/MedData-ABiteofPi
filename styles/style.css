@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
+@import url('https://fonts.googleapis.com/css?family=Red Hat Display');
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #1B272E !important;
-    font-family: 'Inter', sans-serif !important;
+    background-color: #081A24 !important;
+    font-family: 'Red Hat Display'!important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +29,7 @@ body {
 }
 
 .city-search{
-  width: 350px;
+  width: 380px;
   height: 60px;
   padding-left: 20px;
   background-color: #031017;
@@ -40,6 +40,7 @@ body {
   border-style:solid;
   border-width: 1px;
   outline: none;
+  box-sizing: border-box;
 }
 .city-search:focus{
   border-color: #638DA6 !important;
@@ -61,7 +62,7 @@ body {
   display: none;
   position: absolute;
   list-style: none;
-  margin-top: 66px;
+  margin-top: 60px;
   padding: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
