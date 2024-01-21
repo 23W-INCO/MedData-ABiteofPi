@@ -13,7 +13,7 @@ The project uses a json database, holding cities' names, longitude, and latitude
 The file's source of data is [GeoNames Gazetteer](http://www.geonames.org/)
 This file is licensed under a [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/) and the version used in the project was accessed from [here](https://github.com/lutangar/cities.json).
 <br>
-The project additionally accesses current time UV Index data from [Open Meteo](https://open-meteo.com/)
+The project additionally accesses UV Index data from [Open Meteo](https://open-meteo.com/)
 
 
 ## Work in progress
