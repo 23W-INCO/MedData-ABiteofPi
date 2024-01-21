@@ -19,5 +19,5 @@ The project additionally accesses current time UV Index data from [Open Meteo](h
 ## Work in progress
 The project is currently under construction and is being updated constantly.<br>
 Next in queue of being added: 
-- <s>Colors will change according to the UV index value.</s>
 - There will be guides suggesting actions according to the UV index in the user's selected city.
+- There will be a chart to provide an overview to the entire day's uv index.
