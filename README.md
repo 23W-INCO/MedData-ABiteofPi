@@ -23,5 +23,5 @@ Simply start typing your city name, and from the frop down, select your city whe
 You will then be shown the current UV index value of your selected city and recommendations based on this value.<br>
 Additionally, you have access to an overview of the UV index for your city for the current week.<br>
 
-#Important
+###Important
 To avoid issues or bugs, after searching for your initial city and selecting it, please wait about 5 seconds before searching for another city.
