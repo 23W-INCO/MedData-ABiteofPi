@@ -147,13 +147,14 @@ const svgHeight = 300;
             .attr("cy", d => yScale(d))
             .attr("r", 5) // Adjust the radius based on your preference
             .attr("fill", d => colorScaleC(d))
-            .on("mouseover", (d, i) => {
+            .on("mouseover", function(d, i, nodes) {
+                const[xx,yy]= [d3.event.pageX, d3.event.pageY];
                 tooltip.transition()
                     .duration(200)
                     .style("opacity", 0.9);
                 tooltip.html(`UV Index: ${d.toFixed(2)}`)
-                    .style("left", (xScale(timeArray[i]) + margin.left + 355) + "px") // Adjust left position
-                    .style("top", (yScale(d) + margin.top + 1155) + "px"); // Adjust top position
+                    .style("left", (xx -30 ) + "px") // Adjust left position
+                    .style("top", (yy  -10) + "px"); // Adjust top position
             })
             .on("mouseout", () => {
                 tooltip.transition()
