@@ -123,6 +123,7 @@ function initvis(){
             .attr("class", "container")
             .attr("id", "updatedsvg")
             .style("display", "flex")
+            .style("position", "relative")
             .style("justify-content", "center")
             .style("align-items", "center")
             .style("margin", "0");
@@ -269,8 +270,10 @@ function initvis(){
         .on("end", function(){
             const rec = initcontainer.append("h3")
             .style("position", "absolute")
-            .style("left", svgWidth + 300 + "px")  // Adjust the left position for horizontal spacing
-            .style("bottom", svgHeight / 2 -20 + "px")
+            .style("left", "50%")  // Adjust the left position for horizontal spacing
+            .style("bottom", "55%")
+            .style("width", "800px")
+            .style("height", "30px")
             .style("font-size", "20px")
             .style("font-weight", "100")
             .style("color", "#d0d0d0")
@@ -282,8 +285,10 @@ function initvis(){
 
             const spf = initcontainer.append("h3")
             .style("position", "absolute")
-            .style("left", svgWidth + 300 + "px")  // Adjust the left position for horizontal spacing
-            .style("bottom", svgHeight / 2 -60+ "px")
+            .style("left", "50%")  // Adjust the left position for horizontal spacing
+            .style("bottom", "50%")
+            .style("width", "800px")
+            .style("height", "30px")
             .style("font-size", "20px")
             .style("font-weight", "100")
             .style("color", "#d0d0d0")
@@ -296,8 +301,10 @@ function initvis(){
 
             const morerec = initcontainer.append("h3")
             .style("position", "absolute")
-            .style("left", svgWidth + 300 + "px")  // Adjust the left position for horizontal spacing
-            .style("bottom", svgHeight / 2 -100 + "px")
+            .style("left", "50%")  // Adjust the left position for horizontal spacing
+            .style("bottom", "45%")
+            .style("width", "800px")
+            .style("height", "30px")
             .style("font-size", "20px")
             .style("font-weight", "100")
             .style("color", "#d0d0d0")
