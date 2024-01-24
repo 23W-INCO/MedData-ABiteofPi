@@ -26,3 +26,7 @@ Additionally, you have access to an overview of the UV index for your city for t
 ### Important
 To avoid issues or bugs, after searching for your initial city and selecting it, please wait about 5 seconds before searching for another city.
 The project works best on Firefox and chrome. There may be some issues with effects on Safari.
+
+### Screenshots
+![alt text](https://github.com/ABiteofPi/MedData/blob/main/Screenshots/01.png)<br>
+![alt text](https://github.com/ABiteofPi/MedData/blob/main/Screenshots/02.png)
