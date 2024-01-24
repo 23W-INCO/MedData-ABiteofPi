@@ -5,28 +5,31 @@ body {
     padding: 0;
     background-color: #081A24 !important;
     font-family: 'Red Hat Display'!important;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Make sure the body takes up the full height of the viewport */
-    margin: 0;
+    height: 100vh;
+    margin-bottom:400pt;
 }
 
+
+h1{
+  margin-bottom: 5pt;
+}
+h2{
+  margin-bottom: 5pt;
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  margin-top: 20pt;
+  margin-bottom: 10pt;
 }
-.uv-index-container{
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-}
+
 
 .city-search{
   width: 380px;
@@ -84,4 +87,17 @@ body {
 
 .search-results li:hover {
   background-color: #102532;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0.5px solid #aaa;
+    border-radius: 5px;
+    pointer-events: none;
+    color: black; /* Change the text color as needed */
+    transform: translate(-50%, -100%); /* Position above the point */
 }

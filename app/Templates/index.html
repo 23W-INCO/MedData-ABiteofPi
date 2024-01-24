@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="module" src="../Scripts/loc.js"></script>
+
+    <title>UV Index Guide</title>
+</head>
+<body>
+
+
+    <div style="color: #d0d0d0;" class="container">
+        <h1 style="font-weight: 100; font-size: 40px;">Welcome to UV Index Guide</h1>
+        <h2 style="font-weight: 100; font-size: 25px;">To start, first enter the city you're located in</h2>
+    </div>
+
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" class="city-search" placeholder="Enter your city">
+            <ul class="search-results"></ul>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin: 0pt;">
+        <script type="module" src="../Scripts/uvindex.js"></script>
+        <script type="module" src="../Scripts/uvchart.js"></script>
+    </div>
+
+
+    
+
+</body>
+</html>
