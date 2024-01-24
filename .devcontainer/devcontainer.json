@@ -1,0 +1,9 @@
+{
+    "name": "Existing Dockerfile",
+    "build": {
+       "context": "..",
+       "dockerfile": "../Dockerfile"
+    },
+    "forwardPorts": [8000],
+    "postCreateCommand": "cd app && python3 -m uvicorn main:app --reload"
+ }
