@@ -16,8 +16,12 @@ This file is licensed under a [Creative Commons Attribution 3.0 License](https:/
 The project additionally accesses UV Index data from [Open Meteo](https://open-meteo.com/)
 
 
-## Work in progress
-The project is currently under construction and is being updated constantly.<br>
-Next in queue of being added: 
-- There will be guides suggesting actions according to the UV index in the user's selected city.
-- There will be a chart to provide an overview to the entire day's uv index.
+## How It Works
+
+Upon openning the page, You are greated and prompted to search for your city.<br>
+Simply start typing your city name, and from the frop down, select your city when it appears.<br>
+You will then be shown the current UV index value of your selected city and recommendations based on this value.<br>
+Additionally, you have access to an overview of the UV index for your city for the current week.<br>
+
+#Important
+To avoid issues or bugs, after searching for your initial city and selecting it, please wait about 5 seconds before searching for another city.
