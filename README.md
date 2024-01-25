@@ -18,14 +18,15 @@ The project additionally accesses UV Index data from [Open Meteo](https://open-m
 
 ## How It Works
 
-Upon openning the page, You are greated and prompted to search for your city.<br>
-Simply start typing your city name, and from the frop down, select your city when it appears.<br>
+Upon openning the page, You are greeted and prompted to search for your city.<br>
+Simply start typing your city name, and from the drop down, select your city when it appears.<br>
 You will then be shown the current UV index value of your selected city and recommendations based on this value.<br>
 Additionally, you have access to an overview of the UV index for your city for the current week.<br>
 
 ### Important
 To avoid issues or bugs, after searching for your initial city and selecting it, please wait about 5 seconds before searching for another city.
-The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.
+The project works best on Firefox and Chrome. There may be some issues with transition effects on Safari.<br>
+If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects, please consider opening the project on Firefox or Chrome.
 
 ## Screenshots
 ![alt text](https://github.com/ABiteofPi/MedData/blob/main/Screenshots/01.png)<br>
