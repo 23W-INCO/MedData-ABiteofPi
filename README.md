@@ -19,7 +19,8 @@ The project additionally accesses UV Index data from [Open Meteo](https://open-m
 There is a link under the search bar that would redirect you to an upload page. From here you can upload your own JSON file containing location data.<br>
 The data must include a name, latitude, and longitude, if nothing else.<br>
 It must also follow GeoJSON encoding standard.<br>
-You can use the provided "sample.json" file to test this feature.
+You can use the provided "sample.json" file to test this feature.<br>
+The location names included in the sample file, are "A", "B", "C", ...
 
 
 ## How It Works
@@ -30,12 +31,15 @@ You will then be shown the current UV index value of your selected city and reco
 Additionally, you have access to an overview of the UV index for your city for the current week.<br>
 You can upload your own location data for more specific results.<br>
 This could include data for neighbourhoods or streets. Please read the Data section for more information on uploading your own data.<br>
-If you face issues when trying to re-upload data (ex. the app slowing down), Please close the app and run again, the issue may be because of cache.
+If you face issues when trying to re-upload data (ex. the app slowing down), Please close the app and run again, the issue may be because of cache, and js loading/unloading data.
 
 ### Important
-To avoid issues or bugs, after searching for your initial city and selecting it, please wait about 5 seconds before searching for another city.
-The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.<br>
-If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects, please consider opening the project on Firefox or Chrome.
+- The following can be done to avoid noticed issues or bugs:<br>
+- When opening the app for the first time (ex. in codespaces), please wait about 5 seconds before typing your location in the search bar.<br>
+- When typing your location (ex. Passau), please wait a split second before typing in the last character or few characters to allow the data to load. The city name must be selected from the list that loads.<br>
+- after searching for your initial location and selecting it, please wait about 5 seconds before searching for another city.<br>
+- The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.<br>
+- If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects, please consider opening the project on Firefox or Chrome.
 
 
 ## Screenshots
