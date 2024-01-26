@@ -38,6 +38,8 @@ async def create_upload_file(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="Uploaded file must be a JSON file with GeoJSON encoding")
     new_filename = "userlocation.json"
     upload_dir = "Data"
+    if os.path.exists(file_path):
+        raise HTTPException(status_code=400, detail="You have already uploaded a file. to try again, please delete the file userlocation.json from Data diretory.")
     os.makedirs(upload_dir, exist_ok=True)
     file_path = os.path.join(upload_dir, new_filename)
     
@@ -45,8 +47,7 @@ async def create_upload_file(file: UploadFile = File(...)):
         f.write(file.file.read())
     userindex = makehtml("Templates/userlocindex.html")
     
-    if os.path.exists(file_path):
-        raise HTTPException(status_code=400, detail="You have already uploaded a file. to try again, please delete the file userlocation.json from Data diretory.")
+
         
     """return {"Message": "Upload Successful!", "File Name": file.filename}"""
     return HTMLResponse(content=userindex, status_code=200)
