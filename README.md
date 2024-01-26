@@ -34,7 +34,7 @@ This could include data for neighbourhoods or streets. Please read the Data sect
 If you face issues when trying to re-upload data (ex. the app slowing down), Please close the app and run again, the issue may be because of cache, and js loading/unloading data.
 
 ### Important
-- The following can be done to avoid noticed issues or bugs:<br>
+The following can be done to avoid noticed issues or bugs:<br>
 - When opening the app for the first time (ex. in codespaces), please wait about 5 seconds before typing your location in the search bar.<br>
 - When typing your location (ex. Passau), please wait a split second before typing in the last character or few characters to allow the data to load. The city name must be selected from the list that loads.<br>
 - after searching for your initial location and selecting it, please wait about 5 seconds before searching for another city.<br>
