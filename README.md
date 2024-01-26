@@ -16,7 +16,7 @@ This file is licensed under a [Creative Commons Attribution 3.0 License](https:/
 <br>
 The project additionally accesses UV Index data from [Open Meteo](https://open-meteo.com/)<br>
 
-There is a link under the search bar that would you to an upload page. From here you can upload your own JSON file containing location data.<br>
+There is a link under the search bar that would redirect you to an upload page. From here you can upload your own JSON file containing location data.<br>
 The data must include a name, latitude, and longitude, if nothing else.<br>
 It must also follow GeoJSON encoding standard.<br>
 You can use the provided "sample.json" file to test this feature.
