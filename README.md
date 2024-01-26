@@ -25,6 +25,9 @@ The location names included in the sample file, are "Aaa", "Bbb", "Ccc", and fol
 
 ## How It Works
 
+The project can be saved and run locally or in Codespaces.<br>
+In Codespaces, the project should automatically install dependencies and required libraries. It will then redirect to the "app" directory and run "python3 -m uvicorn main:app --reload".<br>
+you can open the app by clicking on the ports tab next to terminal, and ctrl+clicking on the link being shown.<br>
 Upon openning the page, You are greeted and prompted to search for your location.<br>
 Simply start typing your city name, and from the drop down, select your city when it appears.<br>
 You will then be shown the current UV index value of your selected city and recommendations based on this value.<br>
