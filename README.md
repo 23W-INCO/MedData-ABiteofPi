@@ -44,7 +44,7 @@ The following can be done to avoid noticed issues or bugs:<br>
 - When typing your location (ex. Passau), please wait a split second before typing in the last character or few characters (ex. Passa) to allow the data to load. The city name MUST be selected from the list that loads.<br>
 - after searching for your initial location and selecting it, please wait about 5 seconds before searching for another city.<br>
 - The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.<br>
-- If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects. Your browser may not be updated to the patest version. Please consider opening the project on updated Firefox or Chrome.
+- If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects. Your browser may not be updated to the latest version. Please consider opening the project on updated Firefox or Chrome.
 
 
 ## Screenshots
