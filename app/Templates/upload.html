@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../Styles/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script type="module" src="../Scripts/loc.js"></script>
 
     <title>Upload your own JSON file</title>
 </head>
@@ -16,7 +15,7 @@
     <div class="container">
         <div style="color: #d0d0d0; margin-bottom: 50px;" class="upcontainer">
             <h1 style=" font-weight: 100; margin-bottom: 50px; ">Upload your own location file</h1>
-            <form action="/uploadgeojson/" method="post" enctype="multipart/form-data" class="search-container">
+            <form action="/uploadgeojson" method="post" enctype="multipart/form-data" class="search-container">
                 <label style="margin-bottom: 10px;" for="file">Select a JSON file with GeoJSON encoding:</label>
                 <br>
                 <input style="margin-bottom: 10px;" type="file" name="file" accept=".json" required>
