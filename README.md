@@ -41,10 +41,10 @@ The following can be done to avoid noticed issues or bugs:<br>
 - When running the app in Codespaces, the devcontainer will be built. When the editor environment loads, please wait until you can read "Running postCreateCommand..." followed by "cd app && python3 -m uvicorn main:app --reload" in the terminal. Then wait an additional few seconds to allow the initial json library to be loaded properly brefore going to the ports tab and ctrl+clicking on the link under Forwarded Address.<br>
 - When opening the app for the first time (ex. in codespaces), please wait about 5 seconds before typing your location in the search bar.<br>
 - If you notice clicking on your selected city or location doesn't trigger the visuals to take place, refreshing the page will most likely resolve the issue.<br>
-- When typing your location (ex. Passau), please wait a split second before typing in the last character or few characters to allow the data to load. The city name must be selected from the list that loads.<br>
+- When typing your location (ex. Passau), please wait a split second before typing in the last character or few characters (ex. Passa) to allow the data to load. The city name MUST be selected from the list that loads.<br>
 - after searching for your initial location and selecting it, please wait about 5 seconds before searching for another city.<br>
 - The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.<br>
-- If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects, please consider opening the project on Firefox or Chrome.
+- If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects. Your browser may not be updated to the patest version. Please consider opening the project on updated Firefox or Chrome.
 
 
 ## Screenshots
