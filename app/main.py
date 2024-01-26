@@ -46,7 +46,7 @@ async def create_upload_file(file: UploadFile = File(...)):
     userindex = makehtml("Templates/userlocindex.html")
     
     if os.path.exists(file_path):
-        raise HTTPException(status_code=400, detail="You have already uploaded a file. to try again, please delete the file "userlocation.json" from "Data" diretory.")
+        raise HTTPException(status_code=400, detail="You have already uploaded a file. to try again, please delete the file userlocation.json from Data diretory.")
         
     """return {"Message": "Upload Successful!", "File Name": file.filename}"""
     return HTMLResponse(content=userindex, status_code=200)
