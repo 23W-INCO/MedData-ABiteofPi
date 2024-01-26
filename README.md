@@ -6,7 +6,7 @@ Once we understand the general harms of UV radiation, It becomes important to re
 This means limiting the time we spend outside and in the sun, and taking other protective measures such as using proper sun protection agents.<br>
 <br>
 Many cancer patients who are currently, or have gone through chemotheray and/or radiation therapy in the past, experience hightened skin sensitivity. This puts them in a more vulnerable position against the sun's radiation. 
-This project aims to guide these patients in a way that is easy to understand and navigate, in taking the proper measures to be safer when it comes to the sun. Although targeted towards these patients, others with sensitive skin could also benefit from the finished project.<br>
+This project aims to guide these patients in a way that is easy to understand and navigate, in taking the proper measures to be safer when it comes to the sun. Although targeted towards these patients, others with sensitive skin could also benefit from the finished project.<br><br>
 This repositiry can be accessed from the following URL: https://github.com/ABiteofPi/MedData/
 
 ## Data
