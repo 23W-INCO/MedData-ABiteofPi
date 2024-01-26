@@ -27,7 +27,7 @@ The location names included in the sample file, are "Aaa", "Bbb", "Ccc", and fol
 
 The project can be saved and run locally or in Codespaces.<br>
 In Codespaces, the project should automatically install dependencies and required libraries. It will then redirect to the "app" directory and run "python3 -m uvicorn main:app --reload".<br>
-you can open the app by clicking on the ports tab next to terminal, and ctrl+clicking on the link being shown.<br>
+you can open the app by clicking on the ports tab next to terminal, and ctrl+clicking on the link being shown under Forwarded Address.<br>
 Upon openning the page, You are greeted and prompted to search for your location.<br>
 Simply start typing your city name, and from the drop down, select your city when it appears.<br>
 You will then be shown the current UV index value of your selected city and recommendations based on this value.<br>
@@ -38,7 +38,9 @@ If you face issues when trying to re-upload data (ex. the app slowing down), Ple
 
 ### Important
 The following can be done to avoid noticed issues or bugs:<br>
+- When running the app in Codespaces, the devcontainer will be built. When the editor environment loads, please wait until you can read "Running postCreateCommand..." followed by "cd app && python3 -m uvicorn main:app --reload" in the terminal. Then wait an additional few seconds to allow the initial json library to be loaded properly brefore going to the ports tab and ctrl+clicking on the link under Forwarded Address.<br>
 - When opening the app for the first time (ex. in codespaces), please wait about 5 seconds before typing your location in the search bar.<br>
+- If you notice clicking on your selected city or location doesn't trigger the visuals to take place, refreshing the page will most likely resolve the issue.<br>
 - When typing your location (ex. Passau), please wait a split second before typing in the last character or few characters to allow the data to load. The city name must be selected from the list that loads.<br>
 - after searching for your initial location and selecting it, please wait about 5 seconds before searching for another city.<br>
 - The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.<br>
