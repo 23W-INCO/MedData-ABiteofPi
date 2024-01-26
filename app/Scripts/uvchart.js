@@ -10,10 +10,10 @@ const svgHeight = 300;
 
     
     let citydata2 = { name: "", lat: 0, lng: 0 };
-    let uvIndex; // Declare a variable to store the uvIndex globally
+    let uvIndex; 
     let rawdata;
     let times;
-    // Function to handle the selectedCity update in the second file
+
     function handleUpdatechart(selectedCity2) {
         console.log("Selected City in the second file:", selectedCity2);
         citydata2 = { name: selectedCity2.name, lat: selectedCity2.lat, lng: selectedCity2.lng };
@@ -25,25 +25,25 @@ const svgHeight = 300;
             .then(apidata => {
                 console.log('API Data:', apidata);
                 rawdata = apidata;
-                // Check if the expected properties are present in the API response
+
                 if (apidata && apidata.hourly && apidata.hourly.uv_index) {
                     // Extract the uv_index array
                     times = apidata.hourly.time;
                     uvIndex = apidata.hourly.uv_index;
     
-                    // Handle the uv_index array as needed
+
                     console.log("uv_index array:", uvIndex);
                     console.log("time array: ", times);
 
     
-                    // Continue with the rendering logic
+
                     renderChart();
                 } else {
                     console.error('Invalid data structure in API response');
                 }
             })
             .catch(error => {
-                // Handle errors if any
+      
                 console.error('Error fetching data:', error);
             });
     }
@@ -115,7 +115,6 @@ const svgHeight = 300;
 
 
 
-        // Set up scales
         const xScale = d3.scaleTime()
             .domain(d3.extent(timeArray))
             .range([0, width]);
@@ -126,9 +125,8 @@ const svgHeight = 300;
 
             
 
-            // Connect the circles with lines
         chartSvg.selectAll("line")
-            .data(uvIndex.slice(0, -1)) // Exclude the last data point for lines
+            .data(uvIndex.slice(0, -1)) 
             .enter()
             .append("line")
             .attr("x1", (d, i) => xScale(timeArray[i]))
@@ -138,14 +136,14 @@ const svgHeight = 300;
             .attr("stroke", "#666666")
             .attr("stroke-width", 2);    
 
-        // Create circles for each data point
+
         chartSvg.selectAll("circle")
             .data(uvIndex)
             .enter()
             .append("circle")
             .attr("cx", (d, i) => xScale(timeArray[i]))
             .attr("cy", d => yScale(d))
-            .attr("r", 5) // Adjust the radius based on your preference
+            .attr("r", 5) 
             .attr("fill", d => colorScaleC(d))
             .on("mouseover", function(d, i, nodes) {
                 const[xx,yy]= [d3.event.pageX, d3.event.pageY];
@@ -153,8 +151,8 @@ const svgHeight = 300;
                     .duration(200)
                     .style("opacity", 0.9);
                 tooltip.html(`UV Index: ${d.toFixed(2)}`)
-                    .style("left", (xx -30 ) + "px") // Adjust left position
-                    .style("top", (yy  -10) + "px"); // Adjust top position
+                    .style("left", (xx -30 ) + "px") 
+                    .style("top", (yy  -10) + "px"); 
             })
             .on("mouseout", () => {
                 tooltip.transition()
@@ -169,30 +167,28 @@ const svgHeight = 300;
 
 
 
-        // Create x axis
+   
         chartSvg.append("g")
             .attr("transform", `translate(0, ${height-1})`)
             .call(d3.axisBottom(xScale))
             .selectAll("text")
-            .attr("fill", "#d0d0d0"); // Set x axis text color
-    
-        // Create y axis
+            .attr("fill", "#d0d0d0"); 
+ 
         chartSvg.append("g")
             .call(d3.axisLeft(yScale))
             .selectAll("text")
-            .attr("fill", "#d0d0d0"); // Set y axis text color
+            .attr("fill", "#d0d0d0"); 
 
         chartSvg.selectAll(".domain")
             .attr("stroke", "#d0d0d0");
 
-        // Create x axis label
+
         chartSvg.append("text")
             .attr("transform", `translate(${width / 2}, ${height + 30})`)
             .style("text-anchor", "middle")
             .text("Time")
             .attr("fill", "#d0d0d0");
 
-        // Create y axis label
         chartSvg.append("text")
             .attr("transform", "rotate(-90)")
             .attr("y", 0 - margin.left)
@@ -205,12 +201,11 @@ const svgHeight = 300;
             
 
     
-        // Set the callback function using the imported function
-        //setSelectedCityCallback(handleUpdatechart);
+
     }
     
     
-  // Set the callback function using the imported function
+
   setSelectedCityCallback2(handleUpdatechart);
 
 }

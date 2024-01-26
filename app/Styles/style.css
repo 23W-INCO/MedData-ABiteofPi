@@ -27,6 +27,16 @@ h2{
   align-items: center;
   margin-top: 20pt;
   margin-bottom: 10pt;
+  position: relative;
+
+}
+
+.upcontainer{
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  position:absolute;
+  bottom: 0%;
 }
 
 

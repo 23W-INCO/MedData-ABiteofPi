@@ -25,16 +25,16 @@ function initvis(){
             .attr("id", "initial-svg");
     
 
-    // Create the circles
-    const circleRadius = 200;
-    const blurValue = 20 ; // Define the range of blur values
 
-    // Circle in the back with blur
+    const circleRadius = 200;
+    const blurValue = 20 ; 
+
+
     const blurcircle = svg.append("circle")
         .attr("cx", svgWidth / 2)
         .attr("cy", svgHeight / 2)
         .attr("r", circleRadius)
-        .style("fill", "#FFEAB6")  // Set your desired color
+        .style("fill", "#FFEAB6")  
         .style("filter", `blur(${blurValue}px)`);
 
     // Circle in the front
@@ -42,11 +42,11 @@ function initvis(){
         .attr("cx", svgWidth / 2)
         .attr("cy", svgHeight / 2)
         .attr("r", circleRadius)
-        .style("fill", "#FFEAB6");  // Set your desired color
+        .style("fill", "#FFEAB6"); 
 
 
 
-    // Add text lines to the center of the circles
+   
     const textLines = [
         { text: "--", style: "font-size: 60px; font-weight:1000; fill: #314652;" },
         { text: "UV Index", style: "font-size: 20px; font-weight:1000; fill: #314652;" }
@@ -76,34 +76,32 @@ function initvis(){
 
 
 
-    //function sunvis(){
+
 
 
 
     let citydata = { name: "", lat: 0, lng: 0 };
-    let uvIndex; // Declare a variable to store the uvIndex globally
+    let uvIndex; 
     
-    // Function to handle the selectedCity update in the second file
+   
     function handleSelectedCityUpdate(selectedCity) {
         console.log("Selected City in uvindex file :", selectedCity);
         citydata = { name: selectedCity.name, lat: selectedCity.lat, lng: selectedCity.lng };
     
         const apiUrl = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${citydata.lat}&longitude=${citydata.lng}&current=uv_index`;
     
-        // Fetch data from the API
+      
         d3.json(apiUrl)
             .then(apidata => {
-                // Extract the uv_index value
+              
                 uvIndex = apidata.current.uv_index;
     
-                // Handle the uv_index value as needed
                 console.log("uv_index:", uvIndex);
     
-                // Continue with the rendering logic
                 renderVisualization();
             })
             .catch(error => {
-                // Handle errors if any
+                
                 console.error('Error fetching data:', error);
             });
     }
@@ -169,10 +167,10 @@ function initvis(){
             .attr("style", d => d.style)
             .text(d => d.text)
     
-        // Function to animate the blur continuously
+    
     function animateBlur() {
         backgroundCircle.transition()
-            .duration(1500) // Adjust the duration as needed
+            .duration(1500) 
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[0], blurRange[1]);
                 return function (t) {
@@ -181,7 +179,7 @@ function initvis(){
                 };
             })
             .transition()
-            .duration(1500) // Adjust the duration as needed
+            .duration(1500) 
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[1], blurRange[0]);
                 return function (t) {
@@ -190,7 +188,7 @@ function initvis(){
                 };
             })
             .transition()
-            .duration(2500) // Adjust the duration as needed
+            .duration(2500) 
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[0], blurRange[3]);
                 return function (t) {
@@ -199,7 +197,7 @@ function initvis(){
                 };
             })
             .transition()
-            .duration(1500) // Adjust the duration as needed
+            .duration(1500)
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[3], blurRange[2]);
                 return function (t) {
@@ -208,7 +206,7 @@ function initvis(){
                 };
             })
             .transition()
-            .duration(1500) // Adjust the duration as needed
+            .duration(1500)
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[2], blurRange[3]);
                 return function (t) {
@@ -217,7 +215,7 @@ function initvis(){
                 };
             })
             .transition()
-            .duration(2500) // Adjust the duration as needed
+            .duration(2500)
             .tween("blur", function () {
                 const interpolator = d3.interpolate(blurRange[3], blurRange[0]);
                 return function (t) {
@@ -228,7 +226,6 @@ function initvis(){
             .on("end", animateBlur); // Restart the animation
     }
 
-        // Start the initial animation
 
 
        animateBlur();
@@ -263,14 +260,14 @@ function initvis(){
     }
 
 
-           // Transition the entire updated visualization to the left
+
     initsvg.transition()
-        .duration(2000)  // Adjust the duration as needed
-        .attr("transform", "translate(-300, 0)")  // Translate to the left
+        .duration(2000)  
+        .attr("transform", "translate(-300, 0)") 
         .on("end", function(){
             const rec = initcontainer.append("h3")
             .style("position", "absolute")
-            .style("left", "50%")  // Adjust the left position for horizontal spacing
+            .style("left", "50%")  
             .style("bottom", "55%")
             .style("width", "800px")
             .style("height", "30px")
@@ -278,14 +275,14 @@ function initvis(){
             .style("font-weight", "100")
             .style("color", "#d0d0d0")
             .text(`${recommendation}`)
-            .style("opacity", 0)  // Initially set opacity to 0
+            .style("opacity", 0)  
             .transition()
-            .duration(500)  // Adjust the duration as needed
-            .style("opacity", 1);  // Smoothly transition to full opacity
+            .duration(500)  
+            .style("opacity", 1);  
 
             const spf = initcontainer.append("h3")
             .style("position", "absolute")
-            .style("left", "50%")  // Adjust the left position for horizontal spacing
+            .style("left", "50%")  
             .style("bottom", "50%")
             .style("width", "800px")
             .style("height", "30px")
@@ -293,15 +290,15 @@ function initvis(){
             .style("font-weight", "100")
             .style("color", "#d0d0d0")
             .text(`${recspf}`)
-            .style("opacity", 0)  // Initially set opacity to 0
+            .style("opacity", 0)  
             .transition()
-            .duration(500)  // Adjust the duration as needed
-            .style("opacity", 1);  // Smoothly transition to full opacity
+            .duration(500)  
+            .style("opacity", 1); 
 
 
             const morerec = initcontainer.append("h3")
             .style("position", "absolute")
-            .style("left", "50%")  // Adjust the left position for horizontal spacing
+            .style("left", "50%")  
             .style("bottom", "45%")
             .style("width", "800px")
             .style("height", "30px")
@@ -309,10 +306,10 @@ function initvis(){
             .style("font-weight", "100")
             .style("color", "#d0d0d0")
             .text(`${adrec}`)
-            .style("opacity", 0)  // Initially set opacity to 0
+            .style("opacity", 0)  
             .transition()
-            .duration(500)  // Adjust the duration as needed
-            .style("opacity", 1);  // Smoothly transition to full opacity
+            .duration(500)  
+            .style("opacity", 1);  
 
 
              
@@ -330,10 +327,9 @@ function initvis(){
     
     
   
-  // Set the callback function using the imported function
+  
   setSelectedCityCallback(handleSelectedCityUpdate);
 
-    //}
+ 
 
 
-//sunvis();
