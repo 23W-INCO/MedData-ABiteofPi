@@ -34,7 +34,9 @@ If you face issues when trying to re-upload data (ex. the app slowing down), Ple
 
 ### Important
 To avoid issues or bugs, after searching for your initial city and selecting it, please wait about 5 seconds before searching for another city.
-The project works best on Firefox and chrome. There may be some issues with effects on Safari.
+The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.<br>
+If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects, please consider opening the project on Firefox or Chrome.
+
 
 ## Screenshots
 ![alt text](https://raw.githubusercontent.com/ABiteofPi/MedData/main/Screenshots/01.png)<br>
