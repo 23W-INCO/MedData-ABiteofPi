@@ -20,7 +20,7 @@ There is a link under the search bar that would redirect you to an upload page. 
 The data must include a name, latitude, and longitude, if nothing else.<br>
 It must also follow GeoJSON encoding standard.<br>
 You can use the provided "sample.json" file to test this feature.<br>
-The location names included in the sample file, are "Aaa", "Bbb", "Ccc", and follow the english alphabetical order until the letter J ("Jjj").
+The location names included in the sample file, are "Aaa", "Bbb", "Ccc", and follow the english alphabetical order until the letter J ("Jjj"). keep this in mind when searching for location names after your upload.
 
 
 ## How It Works
