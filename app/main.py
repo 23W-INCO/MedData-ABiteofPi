@@ -26,6 +26,11 @@ def viewpage():
     return HTMLResponse(content=indexhtml, status_code=200)
 
 
+@app.get("/upload")
+def getupload():
+    uploadhtml = makehtml("Templates/upload.html")
+    return HTMLResponse(content=uploadhtml, status_code=200)
+
 
 @app.post("/uploadgeojson")
 async def create_upload_file(file: UploadFile = File(...)):
