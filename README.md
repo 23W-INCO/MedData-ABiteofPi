@@ -45,6 +45,7 @@ The following can be done to avoid noticed issues or bugs:<br>
 - after searching for your initial location and selecting it, please wait about 5 seconds before searching for another city.<br>
 - The project works best on Firefox and chrome. There may be some issues with transition effects on Safari.<br>
 - If you notice the sun effect not moving towards the left, and the recommendations not showing up, there may be an issue with the browser interpreting transition effects. Your browser may not be updated to the latest version. Please consider opening the project on updated Firefox or Chrome.
+- If you already have another project running and active on port: 8000, The app will not load, and you may notice issues with the devcontainer running postCreateCommand. 
 
 
 ## Screenshots
