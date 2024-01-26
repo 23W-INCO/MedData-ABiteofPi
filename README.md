@@ -24,13 +24,7 @@ You can use the provided "sample.json" file to test this feature.
 
 ## How It Works
 
-Upon openning the page, You are greeted and prompted to search for your city.<br>
-Simply start typing your city name, and from the drop down, select your city when it appears.<br>
-<<<<<<< HEAD
 Upon openning the page, You are greeted and prompted to search for your location.<br>
-=======
-Upon openning the page, You are greeted and prompted to search for your city.<br>
->>>>>>> 0d2af8261ab245f80d4ef0f70ff0dc4b03f3fa59
 Simply start typing your city name, and from the drop down, select your city when it appears.<br>
 You will then be shown the current UV index value of your selected city and recommendations based on this value.<br>
 Additionally, you have access to an overview of the UV index for your city for the current week.<br>
@@ -41,3 +35,7 @@ If you face issues when trying to re-upload data (ex. the app slowing down), Ple
 ### Important
 To avoid issues or bugs, after searching for your initial city and selecting it, please wait about 5 seconds before searching for another city.
 The project works best on Firefox and chrome. There may be some issues with effects on Safari.
+
+## Screenshots
+![alt text](https://raw.githubusercontent.com/ABiteofPi/MedData/main/Screenshots/01.png)<br>
+![alt text](https://raw.githubusercontent.com/ABiteofPi/MedData/main/Screenshots/02.png)
